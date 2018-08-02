@@ -1,5 +1,5 @@
 {
-  "name": "Genetic Programming Example",
+  "name": "genetic-programming-example",
   "version": "0.0.1",
   "description": "An example of genetic programming.",
   "dependencies": {

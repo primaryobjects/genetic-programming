@@ -8,7 +8,7 @@ genetic.select2 = Genetic.Select2.Tournament2;
 
 const utilityManager = {
   operators: '+-*/',
-  values: '0123456789', //xy
+  values: '0123456789xy',
 
   isOperator: function(val) {
     return this.operators.includes(val);
@@ -234,8 +234,8 @@ genetic.evolve({
   mutation: 0.3,
   skip: 50 /* frequency for notifications */
 }, {
-  solution: 123,//'+x*xy', // The function for the GA to learn.
-  //testCases: [ {x: 1, y: 1}, {x: 3, y: 5}, {x: 5, y: 2}, {x: 9, y: 10}, {x: 12, y: 2}, {x: 20, y: 6}, {x: 45, y: 5}, {x: 100, y: 400} ], // Test cases to learn from.
+  solution: '+x*xy', // The function for the GA to learn.
+  testCases: [ {x: 1, y: 1}, {x: 3, y: 5}, {x: 5, y: 2}, {x: 9, y: 10}, {x: 12, y: 2}, {x: 20, y: 6}, {x: 45, y: 5}, {x: 100, y: 400} ], // Test cases to learn from.
   maxTreeDepth: 25,
   maxLength: 200,
   manager: utilityManager
