@@ -1,0 +1,8 @@
+{
+  "name": "Genetic Programming Example",
+  "version": "0.0.1",
+  "description": "An example of genetic programming.",
+  "dependencies": {
+    "genetic-js": "^0.1.14"
+  }
+}
