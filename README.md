@@ -1,4 +1,4 @@
-genetic-programming
+Genetic Programming
 -------------------
 
 Genetic programming is a branch of artificial intelligence that uses evolutionary computation to generate computer programs for solving a particular task. The computer programs are represented by encoded genes and slightly modified at each time-step via cross-over and mutation until a resulting program is found that solves the given task to a degree of accuracy.
@@ -7,15 +7,15 @@ This project hosts a demo of several genetic algorithm and genetic programming e
 
 - Hello World
 
-*A traditional "hello world" example for genetic algorithms, where the goal is to output the text, "Hello World".*
+  *A traditional "hello world" example for genetic algorithms, where the goal is to output the text, "Hello World".*
 
 - Prefix
 
-*A genetic programming example where a computer program is evolved to represent a specific mathematical expression, in prefix notation format.*
+  *A genetic programming example where a computer program is evolved to represent a specific mathematical expression, in prefix notation format.*
 
 - Variable
 
-*A genetic programming example where a computer program is evolved to represent a mathematical expression containing both numbers and variables (i.e., formulas ) in prefix notation format.*
+  *A genetic programming example where a computer program is evolved to represent a mathematical expression containing both numbers and variables (i.e., formulas ) in prefix notation format.*
 
 ## Genetic Algorithms in JavaScript
 
