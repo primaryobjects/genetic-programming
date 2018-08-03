@@ -162,6 +162,8 @@ genetic.evolve({
 
 Prefix Expression Notation
 
+The goal is for the AI to write a program that calculates the value for 123 using prefix notation.
+
 ```
 +8+*8+7-80-38
 ```
@@ -183,6 +185,51 @@ Step 5: 8 + 115 = 123
 ```
 
 ## Variable
+
+Prefix Expression Notation
+
+The goal is for the AI to write a program that calculates (X * Y) + X using prefix notation, for any given value of X and Y.
+
+```
++*yxx
+```
+
+Postfix Expression Notation
+
+```
+yx*x+
+```
+
+Solving for (X=2, Y=5)
+
+```
+5 2 * 2 +
+```
+
+Infix Translation
+
+```text
+Step 1: 5 * 2 = 10
+Step 2: 10 + 2 = 120
+```
+
+Solving for (X=10, Y=20)
+
+```text
+20 10 * 10 + = 210
+```
+
+Solving for (X=8, Y=100)
+
+```text
+100 8 * 8 + = 808
+```
+
+Solving for (X=41, Y=62)
+
+```text
+62 41 * 41 + = 2583
+```
 
 ## License
 
