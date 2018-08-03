@@ -86,5 +86,5 @@ genetic.evolve({
   mutation: 0.3,
   skip: 10 /* frequency for notifications */
 }, {
-  solution: 'Hola, como estas? Yo espero tu sientas mas bien.'
+  solution: 'Hello World'
 })

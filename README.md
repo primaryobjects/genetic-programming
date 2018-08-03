@@ -160,6 +160,28 @@ genetic.evolve({
 
 ## Prefix
 
+Prefix Expression Notation
+
+```
++8+*8+7-80-38
+```
+
+Postfix Expression Notation
+
+```
+88780-+*38-++
+```
+
+Infix Translation
+
+```text
+Step 1: 7 + 8 = 15
+Step 2: 8 * 15 = 120
+Step 3: 3 - 8 = -5
+Step 4: 120 + -5 = 115
+Step 5: 8 + 115 = 123
+```
+
 ## Variable
 
 ## License
