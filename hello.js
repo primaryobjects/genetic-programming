@@ -62,14 +62,14 @@ genetic.fitness = function(entity) {
   let score = 0;
 
   for (let i=0; i<this.userData.solution.length; i++) {
-    score += 255 - Math.abs(entity.charCodeAt(i) - this.userData.solution.charCodeAt(i));
+    score += 256 - Math.abs(entity.charCodeAt(i) - this.userData.solution.charCodeAt(i));
   }
 
   return score;
 }
 
 genetic.generation = function(pop, generation, stats) {
-  return pop[0].fitness < this.userData.solution.length * 255;
+  return pop[0].fitness < this.userData.solution.length * 256;
 }
 
 genetic.notification = function(pop, generation, stats, isDone) {
