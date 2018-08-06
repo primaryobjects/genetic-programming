@@ -9,13 +9,19 @@ This project hosts a demo of several genetic algorithm and genetic programming e
 
   *A traditional "hello world" example for genetic algorithms, where the goal is to output the text, "Hello World".*
 
+  ![Genetic programming hello world](images/genetic-programming-1.png)
+
 - Prefix
 
   *A genetic programming example where a computer program is evolved to represent a specific mathematical expression, in prefix notation format.*
 
+  ![Genetic programming for a mathematical equation](images/genetic-programming-4.png)
+
 - Variable
 
   *A genetic programming example where a computer program is evolved to represent a mathematical expression containing both numbers and variables (i.e., formulas ) in prefix notation format.*
+
+  ![Genetic programming for a mathematical equation with variable values](images/genetic-programming-7.png)
 
 ## Genetic Algorithms in JavaScript
 
