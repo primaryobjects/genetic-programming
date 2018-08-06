@@ -183,11 +183,12 @@ Postfix Expression Notation
 Infix Translation
 
 ```text
-Step 1: 7 + 8 = 15
-Step 2: 8 * 15 = 120
-Step 3: 3 - 8 = -5
-Step 4: 120 + -5 = 115
-Step 5: 8 + 115 = 123
+Step 1: 8 - 0 = 8
+Step 2: 7 + 8 = 15
+Step 3: 8 * 15 = 120
+Step 4: 3 - 8 = -5
+Step 5: 120 + -5 = 115
+Step 6: 8 + 115 = 123
 ```
 
 ## Variable
