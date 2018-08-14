@@ -8,7 +8,7 @@ genetic.select2 = Genetic.Select2.Tournament2;
 
 const utilityManager = {
   operators: '+-*/',
-  values: '0123456789xy',
+  values: '0123456789x',
 
   isOperator: function(val) {
     return this.operators.includes(val);
@@ -181,30 +181,24 @@ genetic.fitness = function(entity) {
   let solution = this.userData.solution;
 
   if (this.userData.testCases) {
-    fitness = this.userData.testCases.map(testCase => {
-      return this.userData.manager.evaluatePrefix(entity, testCase);
-    }).reduce((total, x) => { return total + x; });
+    // For each test case, subtract a penalty from a total of 100 for any deviation in the evaluation from the target value.
+    return this.userData.testCases.map(testCase => {
+      const target = this.userData.manager.evaluatePrefix(this.userData.solution, testCase);
+      const actual = this.userData.manager.evaluatePrefix(entity, testCase);
 
-    solution = this.userData.testCases.map(testCase => {
-      return this.userData.manager.evaluatePrefix(this.userData.solution, testCase);
+      // Give 100 points for each test case, minus any deviation in the evaluated value.
+      return (100 - Math.abs(target - actual));
     }).reduce((total, x) => { return total + x; });
   }
   else {
     fitness = this.userData.manager.evaluatePrefix(entity);
+    return solution - Math.abs(solution - fitness);
   }
-
-  return solution - Math.abs(solution - fitness);
 }
 
 genetic.generation = function(pop, generation, stats) {
-  let solution = this.userData.solution;
-
-  if (this.userData.testCases) {
-    solution = this.userData.testCases.map(testCase => {
-     return this.userData.manager.evaluatePrefix(this.userData.solution, testCase);
-   }).reduce((total, x) => { return total + x; });
-  }
-
+  // If using test cases, give 100 points for each test case. Otherwise, just use the value of the evaluation.
+  let solution = (this.userData.testCases && this.userData.testCases.length * 100) || this.userData.solution;
   return pop[0].fitness !== solution;
 }
 
@@ -234,9 +228,9 @@ genetic.evolve({
   mutation: 0.3,
   skip: 50 /* frequency for notifications */
 }, {
-  solution: '+x*xy', // The function for the GA to learn.
-  testCases: [ {x: 1, y: 1}, {x: 3, y: 5}, {x: 5, y: 2}, {x: 9, y: 10}, {x: 12, y: 2}, {x: 20, y: 6}, {x: 45, y: 5}, {x: 100, y: 400} ], // Test cases to learn from.
+  solution: '**xxx', // The function for the GA to learn.
+  testCases: [ {x: 1 }, {x: 3}, {x: 5}, {x: 9}, {x: 10} ], // Test cases to learn from.
   maxTreeDepth: 25,
-  maxLength: 200,
+  maxLength: 100,
   manager: utilityManager
 })
