@@ -1,6 +1,9 @@
 Genetic Programming
 -------------------
 
+Read the full article at:
+[Creating Self-Assembling Code with Genetic Programming](http://www.primaryobjects.com/2018/09/03/creating-self-assembling-code-with-genetic-programming/)
+
 Genetic programming is a branch of artificial intelligence that uses evolutionary computation to generate computer programs for solving a particular task. The computer programs are represented by encoded genes and slightly modified at each time-step via cross-over and mutation until a resulting program is found that solves the given task to a degree of accuracy.
 
 This project hosts a demo of several genetic algorithm and genetic programming examples written in JavaScript with the [genetic-js](https://github.com/subprotocol/genetic-js) library.
